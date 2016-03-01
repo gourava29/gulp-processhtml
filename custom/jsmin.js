@@ -25,7 +25,7 @@ module.exports = function(processor) {
 			.pipe(concat(outputFileName))
 			.pipe(uglify())
     		.pipe(gulp.dest(process.env.PWD+outputFileDest))
-		return content;
+		return content.replace(blockLine, "<script src='"+outputFileName+"'></script>");
 
 
     });
