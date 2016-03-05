@@ -15,6 +15,7 @@ module.exports = function(options) {
     // Add some custom block types.
     options.customBlockTypes.push(path.join(__dirname, 'custom/replace.js'));
     options.customBlockTypes.push(path.join(__dirname, 'custom/jsmin.js'));
+    options.customBlockTypes.push(path.join(__dirname, 'custom/cssmin.js'));
 
     var processor = new HTMLProcessor(options),
         content   = '';
